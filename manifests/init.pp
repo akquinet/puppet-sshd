@@ -21,7 +21,7 @@ class sshd ($port ='22'){
 		require => Package['openssh-server']
 	}
 	service { "sshd":
-		ensure => present,
+		ensure => running,
 		restart => true,
 		require => File["/etc/ssh/sshd_config"]
 	}
