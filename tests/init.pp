@@ -1,1 +1,1 @@
-include puppet_sshd
+include sshd
