@@ -20,4 +20,9 @@ class sshd ($port ='22'){
 		content => template('sshd/sshd_config.erb'),
 		require => Package['openssh-server']
 	}
+	service { "sshd":
+		ensure => present,
+		restart => true,
+		require => File["/etc/ssh/sshd_config"]
+	}
 }
