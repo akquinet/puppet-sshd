@@ -12,7 +12,12 @@
 #
 # [Remember: No empty lines between comments and class definition]
 class sshd ($port ='22'){
-        package { "openssh-server":
+        $pkg = $::operatingsystem ? {
+          /(?i:OpenSuSE,SuSE)/ => 'openssh',
+          default => 'openssh-server' 
+        }
+  
+        package { $pkg:
                 ensure => present,
         }
         file { "/etc/ssh/sshd_config":
