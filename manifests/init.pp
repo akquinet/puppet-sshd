@@ -13,7 +13,7 @@
 # [Remember: No empty lines between comments and class definition]
 class sshd ($port ='22'){
         $pkg = $::operatingsystem ? {
-          /(?i:OpenSuSE,SuSE)/ => 'openssh',
+          /(?i:OpenSuSE,SuSE,SLES)/ => 'openssh',
           default => 'openssh-server' 
         }
   

@@ -11,7 +11,7 @@
     ".project": "a450f729f56257334472a293bdb5af52",
     "Modulefile": "b08e5d947b13516bb07b08094161c9c9",
     "README": "182cdd411e6c2c3228e3d87e70e38c6c",
-    "manifests/init.pp": "65d54b1c8a412c87dd3c55fa8e067ed4",
+    "manifests/init.pp": "cbec669d4e58af3ac29d64f7c92a1385",
     "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
     "spec/spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
     "templates/sshd_config.erb": "39ab371b97a2a49b757e81798e52ecca",
