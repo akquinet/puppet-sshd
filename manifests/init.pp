@@ -13,7 +13,7 @@
 # [Remember: No empty lines between comments and class definition]
 class sshd ($port ='22'){
         $pkg = $::operatingsystem ? {
-          /(?i:OpenSuSE,SuSE,SLES)/ => 'openssh',
+          SLES => 'openssh',
           default => 'openssh-server' 
         }
   
@@ -23,7 +23,7 @@ class sshd ($port ='22'){
         file { "/etc/ssh/sshd_config":
                 ensure => present,
                 content => template('sshd/sshd_config.erb'),
-                require => Package['openssh-server'],
+                require => Package[$pkg],
                 notify => Service['sshd']
         }
         service { "sshd":
